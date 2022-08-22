@@ -41,8 +41,12 @@
                                 <!-- end col -->
                                 <div class="col-4">
                                     <div class="input-style-1">
-                                        <label>Rol de Sistema</label>
-                                        <input type="text" value="{{ $role->system_role }}" readonly>
+                                      <label>Rol de Sistema</label>
+                                      @foreach ($keys as $key)
+                                        @if ($key[0] == $role->system_role)
+                                          <input type="text" value="{{ $key[1] ?? old('system_role') }}" readonly >
+                                        @endif
+                                      @endforeach 
                                     </div>
                                 </div>
                                 <!-- end col -->

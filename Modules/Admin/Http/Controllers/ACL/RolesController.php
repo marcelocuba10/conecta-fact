@@ -51,7 +51,7 @@ class RolesController extends Controller
             ->orderBy('created_at', 'DESC')
             ->get();
 
-        return view('admin::roles.create', compact('permissions', 'keys', 'system_role', 'guard_names', 'userKeySelected'));
+        return view('admin::roles.create', compact('permissions', 'keys', 'system_role', 'guard_names','roleGuard'));
     }
 
     public function store(Request $request)
@@ -77,11 +77,17 @@ class RolesController extends Controller
     public function show($id)
     {
         $role = Role::find($id);
+
+        $keys = array(
+            array('0', 'No'),
+            array('1', 'Si')
+        );
+
         $permissions = Permission::get();
         $rolePermission = $role->permissions->pluck('name')->toArray();
 
         //dd($rolePermission);
-        return view('admin::roles.show', compact('role', 'rolePermission'));
+        return view('admin::roles.show', compact('role', 'rolePermission','keys'));
     }
 
     public function edit($id)
