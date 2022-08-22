@@ -17,7 +17,10 @@ class Providers extends Model
         'email',
         'doc_number',
         'manager',
-        'company'
+        'company',
+        'timbrado',
+        'start_date_timbrado',
+        'end_date_timbrado'
     ];
     
     protected static function newFactory()

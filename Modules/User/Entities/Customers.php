@@ -15,7 +15,10 @@ class Customers extends Model
         'address',
         'last_name',
         'email',
-        'doc_number'
+        'doc_number',
+        'timbrado',
+        'start_date_timbrado',
+        'end_date_timbrado'
     ];
     
     protected static function newFactory()

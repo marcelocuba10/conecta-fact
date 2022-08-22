@@ -51,14 +51,15 @@
           </a>
           <ul id="ddmenu_2" class="dropdown-nav" style="{{ (request()->is('user/reports/*')) ? '' : 'display:none' }}">
             <li >
-              <a href="/user/reports/customers" class="{{ (request()->is('user/reports/customers')) ? 'active' : '' }}">Entrada</a>
+              <a href="/user/reports/customers" class="{{ (request()->is('user/reports/customers')) ? 'active' : '' }}">Cuentas a Pagar</a>
             </li>
             <li >
-              <a href="/user/reports/users" class="{{ (request()->is('user/reports/users')) ? 'active' : '' }}">Salida</a>
+              <a href="/user/reports/users" class="{{ (request()->is('user/reports/users')) ? 'active' : '' }}">Cuentas a Recibir</a>
             </li>
           </ul>
         </li>
         @endcan
+        {{-- 
         <span class="divider">
           <hr />
         </span>
@@ -81,7 +82,7 @@
             </li>
           </ul>
         </li>
-        @endcan
+        @endcan --}}
 
         <span class="divider">
           <hr />

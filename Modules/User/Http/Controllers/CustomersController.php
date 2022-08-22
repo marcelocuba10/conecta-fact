@@ -37,12 +37,19 @@ class CustomersController extends Controller
 
     public function store(Request $request)
     {
+        //date validation, not less than 1980 and not greater than the current year
+        $initialDate = '1980-01-01';
+        $currentDate = (date('Y') + 1) . '-12-01'; //2023-01-01
+
         $request->validate([
             'name' => 'required|max:50|min:5',
             'phone' => 'nullable|max:25|min:5',
             'address' => 'nullable|max:255|min:5',
             'email' => 'nullable|max:50|min:10',
             'doc_number' => 'nullable|max:20|min:6',
+            'timbrado' => 'nullable|max:8|min:8',
+            'start_date_timbrado' => 'nullable|date_format:Y-m-d|after_or_equal:' . $initialDate . '|before:' . $currentDate,
+            'end_date_timbrado' => 'nullable|date_format:Y-m-d|after_or_equal:' . $initialDate . '|before:' . $currentDate,
         ]);
 
         Customers::create($request->all());
@@ -63,12 +70,19 @@ class CustomersController extends Controller
 
     public function update(Request $request, $id)
     {
+        //date validation, not less than 1980 and not greater than the current year
+        $initialDate = '1980-01-01';
+        $currentDate = (date('Y') + 1) . '-12-01'; //2023-01-01
+
         $request->validate([
             'name' => 'required|max:50|min:5',
             'phone' => 'nullable|max:25|min:5',
             'address' => 'nullable|max:255|min:5',
             'email' => 'nullable|max:50|min:10',
             'doc_number' => 'nullable|max:20|min:6',
+            'timbrado' => 'nullable|max:8|min:8',
+            'start_date_timbrado' => 'nullable|date_format:Y-m-d|after_or_equal:' . $initialDate . '|before:' . $currentDate,
+            'end_date_timbrado' => 'nullable|date_format:Y-m-d|after_or_equal:' . $initialDate . '|before:' . $currentDate,
         ]);
 
         $customer = Customers::find($id);

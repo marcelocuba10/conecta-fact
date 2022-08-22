@@ -23,6 +23,9 @@ class CreateProvidersTable extends Migration
             $table->string('address')->nullable();
             $table->string('doc_number')->nullable();
             $table->string('email')->nullable();
+            $table->integer('timbrado')->nullable();
+            $table->string('start_date_timbrado')->nullable();
+            $table->string('end_date_timbrado')->nullable();
             $table->timestamps();
         });
     }

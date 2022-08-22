@@ -55,12 +55,8 @@
               <i class="lni lni-graph"></i>
             </div>
             <div class="content">
-              @php
-                use Modules\User\Entities\Machines;
-                $cant_machines = Machines::count();
-              @endphp
               <h6 class="mb-10">Total Máquinas Locales</h6>
-              <h3 class="text-bold mb-10">{{ $cant_machines }}</h3>
+              <h3 class="text-bold mb-10">21</h3>
             </div>
           </div>
           <!-- End Icon Cart -->
