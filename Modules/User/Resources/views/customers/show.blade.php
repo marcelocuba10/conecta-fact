@@ -33,9 +33,6 @@
               <button id="tab-2-1" class="main-btn deactive-btn active" data-bs-toggle="tab" data-bs-target="#tabContent-2-1">
                 <i class="lni lni-user mr-10"></i>Información Básica
               </button>
-              <button id="tab-2-2" class="main-btn deactive-btn" data-bs-toggle="tab" data-bs-target="#tabContent-2-2">
-                <i class="lni lni-graph mr-10"></i>Información de Máquinas de btc.com
-              </button>
             </nav>
             <div class="tab-content" id="nav-tabContent2">
               <div class="tab-pane fade active show" id="tabContent-2-1">
@@ -63,94 +60,15 @@
                   <!-- end col -->
                   <div class="col-6">
                     <div class="input-style-1">
-                      <label>Access Key</label>
-                      <input type="text" name="access_key" value="{{ $customer->access_key ?? old('access_key') }}" readonly>
+                      <label>Email</label>
+                      <input type="text" name="email" value="{{ $customer->email ?? old('email') }}" readonly>
                     </div>
                   </div>
                   <!-- end col -->
                   <div class="col-6">
                     <div class="input-style-1">
-                      <label>Puid</label>
-                      <input type="text" name="puid" value="{{ $customer->puid ?? old('puid') }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-12">
-                    <div class="button-groupd-flexjustify-content-centerflex-wrap">
-                      <a class="main-btn danger-btn-outline m-2" href="/user/customers">Atrás</a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="tab-pane fade" id="tabContent-2-2">
-                <div class="row">
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>workers_active</label>
-                      <input type="text" value="{{ $customer->workers_active }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>workers_inactive</label>
-                      <input type="text" value="{{ $customer->workers_inactive }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>workers_dead</label>
-                      <input type="text" value="{{ $customer->workers_dead }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>shares_1m</label>
-                      <input type="text" value="{{ $customer->shares_1m }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>shares_5m</label>
-                      <input type="text" value="{{ $customer->shares_5m }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>shares_15m</label>
-                      <input type="text" value="{{ $customer->shares_15m }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>workers_total</label>
-                      <input type="text" value="{{ $customer->workers_total }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>shares_unit</label>
-                      <input type="text" value="{{ $customer->shares_unit }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>shares_1d</label>
-                      <input type="text" value="{{ $customer->shares_1d }}" readonly>
-                    </div>
-                  </div>
-                  <!-- end col -->
-                  <div class="col-3">
-                    <div class="input-style-1">
-                      <label>shares_1h</label>
-                      <input type="text" value="{{ $customer->shares_1h }}" readonly>
+                      <label>Doc Identidad</label>
+                      <input type="text" name="doc_number" value="{{ $customer->doc_number ?? old('doc_number') }}" readonly>
                     </div>
                   </div>
                   <!-- end col -->

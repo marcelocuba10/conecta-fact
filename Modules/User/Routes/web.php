@@ -70,16 +70,16 @@ Route::prefix('user')->group(function () {
             Route::get('/search', 'UserController@search')->name('users.search');
         });
 
-        /*** Notifications Routes ***/
-        Route::group(['prefix' => 'notifications'], function () {
-            Route::get('/', 'NotificationsController@index')->name('notifications.index');
-            Route::get('/create', 'NotificationsController@create')->name('notifications.create');
-            Route::post('/create', 'NotificationsController@store')->name('notifications.store');
-            Route::get('/{id}/show', 'NotificationsController@show')->name('notifications.show');
-            Route::get('/edit/{id}', 'NotificationsController@edit')->name('notifications.edit');
-            Route::put('/update/{id}', 'NotificationsController@update')->name('notifications.update');
-            Route::delete('/{id}/delete', 'NotificationsController@destroy')->name('notifications.destroy');
-            Route::get('/search', 'NotificationsController@search')->name('notifications.search');
+        /*** Providers Routes ***/
+        Route::group(['prefix' => 'providers'], function () {
+            Route::get('/', 'ProvidersController@index')->name('providers.index');
+            Route::get('/create', 'ProvidersController@create')->name('providers.create');
+            Route::post('/create', 'ProvidersController@store')->name('providers.store');
+            Route::get('/show/{id}', 'ProvidersController@show')->name('providers.show');
+            Route::get('/edit/{id}', 'ProvidersController@edit')->name('providers.edit');
+            Route::put('/update/{id}', 'ProvidersController@update')->name('providers.update');
+            Route::delete('/delete/{id}', 'ProvidersController@destroy')->name('providers.destroy');
+            Route::get('/search', 'ProvidersController@search')->name('providers.search');
         });
 
         /** Machines Routes*/

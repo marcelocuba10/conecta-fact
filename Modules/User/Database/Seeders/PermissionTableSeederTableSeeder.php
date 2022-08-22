@@ -37,10 +37,10 @@ class PermissionTableSeederTableSeeder extends Seeder
             'financial-edit',
             'financial-delete',
 
-            'schedule-list',
-            'schedule-create',
-            'schedule-edit',
-            'schedule-delete',
+            'provider-list',
+            'provider-create',
+            'provider-edit',
+            'provider-delete',
 
             'report-list',
             'report-create',

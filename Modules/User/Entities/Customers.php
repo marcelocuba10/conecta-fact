@@ -13,9 +13,9 @@ class Customers extends Model
         'name',
         'phone',
         'address',
-        'access_key',
-        'puid',
-        'total_machines'
+        'last_name',
+        'email',
+        'doc_number'
     ];
     
     protected static function newFactory()

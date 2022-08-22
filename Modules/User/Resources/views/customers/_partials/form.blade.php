@@ -23,22 +23,15 @@
     <!-- end col -->
     <div class="col-6">
       <div class="input-style-1">
-        <label>(*) Cantidad Máquinas</label>
-        <input type="number" min="0" name="total_machines" value="{{ $customer->total_machines ?? old('total_machines') }}" class="bg-transparent">
+        <label>Email</label>
+        <input type="text" name="email" value="{{ $customer->email ?? old('email') }}" class="bg-transparent">
       </div>
     </div>
     <!-- end col -->
     <div class="col-6">
       <div class="input-style-1">
-        <label>Access Key</label>
-        <input type="text" name="access_key" value="{{ $customer->access_key ?? old('access_key') }}" class="bg-transparent">
-      </div>
-    </div>
-    <!-- end col -->
-    <div class="col-6">
-      <div class="input-style-1">
-        <label>Puid</label>
-        <input type="text" name="puid" value="{{ $customer->puid ?? old('puid') }}" class="bg-transparent">
+        <label>Doc Identidad</label>
+        <input type="text" name="doc_number" value="{{ $customer->doc_number ?? old('doc_number') }}" class="bg-transparent">
       </div>
     </div>
     <!-- end col -->

@@ -73,7 +73,7 @@
                             <td class="text-sm"><h6 class="text-sm">#{{ ++$i }}</h6></td>
                             <td class="min-width"><p>{{ $customer->name }}</p></td>
                             <td class="min-width"><p>{{ $customer->phone }}</p></td>
-                            <td class="min-width"><p>{{ $customer->total_machines }}</p></td>
+                            <td class="min-width"><p>{{ $customer->email }}</p></td>
                             <td class="min-width"><p>{{ $customer->address }}</p></td>
                             <td class="text-right">
                                 <div class="btn-group">
