@@ -47,10 +47,10 @@ class PermissionTableSeederTableSeeder extends Seeder
             'report-edit',
             'report-delete',
 
-            'notification-list',
-            'notification-create',
-            'notification-edit',
-            'notification-delete',
+            'parameter-list',
+            'parameter-create',
+            'parameter-edit',
+            'parameter-delete',
 
             'machine-list',
             'machine-create',

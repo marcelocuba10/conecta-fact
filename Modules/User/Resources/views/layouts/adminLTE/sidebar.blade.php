@@ -51,10 +51,13 @@
           </a>
           <ul id="ddmenu_2" class="dropdown-nav" style="{{ (request()->is('user/reports/*')) ? '' : 'display:none' }}">
             <li >
-              <a href="/user/reports/customers" class="{{ (request()->is('user/reports/customers')) ? 'active' : '' }}">Cuentas a Pagar</a>
+              <a href="#" class="{{ (request()->is('user/reports/customers')) ? 'active' : '' }}">Cuentas a Pagar</a>
             </li>
             <li >
-              <a href="/user/reports/users" class="{{ (request()->is('user/reports/users')) ? 'active' : '' }}">Cuentas a Recibir</a>
+              <a href="#" class="{{ (request()->is('user/reports/users')) ? 'active' : '' }}">Cuentas a Recibir</a>
+            </li>
+            <li >
+              <a href="#" class="{{ (request()->is('user/reports/users')) ? 'active' : '' }}">Gastos</a>
             </li>
           </ul>
         </li>
@@ -98,6 +101,13 @@
             <span class="text">Ajustes</span>
           </a>
           <ul id="ddmenu_4" class="dropdown-nav" style="{{ (request()->is('user/users')) || (request()->is('user/ACL/*')) ? '' : 'display:none'}}">
+            @can('user-list')
+            <li>
+              <a href="/user/parameters" class="{{ (request()->is('user/parameters')) ? 'active' : '' }}">
+                <span class="text">Parámetros</span>
+              </a>
+            </li>
+            @endcan
             @can('user-list')
             <li>
               <a href="/user/users" class="{{ (request()->is('user/users')) ? 'active' : '' }}">

@@ -82,34 +82,6 @@ Route::prefix('user')->group(function () {
             Route::get('/search', 'ProvidersController@search')->name('providers.search');
         });
 
-        /** Machines Routes*/
-        Route::group(['prefix' => 'machines'], function () {
-            Route::any('/list', 'MachinesController@index_list')->name('machines.index_list');
-            Route::any('/list_api', 'MachinesController@index_list_api')->name('machines.index_list_api');
-
-            Route::get('/grid_view', 'MachinesController@grid_view')->name('machines.grid_view');
-            Route::any('/grid_view_api', 'MachinesController@grid_view_api')->name('machines.grid_view_api');
-
-            Route::get('/create', 'MachinesController@create')->name('machines.create');
-            Route::post('/create', 'MachinesController@store')->name('machines.store');
-
-            Route::get('/{id}/show', 'MachinesController@show')->name('machines.show');
-            Route::get('/{id}/show_api', 'MachinesController@show_api')->name('machines.show_api');
-
-            Route::get('/edit/{id}', 'MachinesController@edit')->name('machines.edit');
-            Route::put('/update/{id}', 'MachinesController@update')->name('machines.update');
-            Route::delete('/{id}/delete', 'MachinesController@destroy')->name('machines.destroy');
-            Route::get('/createPDF', 'MachinesController@createPDF')->name('machines.createPDF');
-
-            Route::any('/search_filter_list', 'MachinesController@search_filter_list')->name('machines.search_filter_list');
-            Route::any('/search_filter_list_api', 'MachinesController@search_filter_list_api')->name('machines.search_filter_list_api');
-
-            Route::any('/search_gridview', 'MachinesController@search_gridview')->name('machines.search_gridview');
-            Route::any('/search_gridview_api', 'MachinesController@search_gridview_api')->name('machines.search_gridview_api');
-            Route::any('/filter_gridview', 'MachinesController@filter_gridview')->name('machines.filter_gridview');
-            Route::any('/filter_gridview_api', 'MachinesController@filter_gridview_api')->name('machines.filter_gridview_api');
-        });
-
         /*** Customers Routes ***/
         Route::group(['prefix' => 'customers'], function () {
             Route::get('/', 'CustomersController@index')->name('customers.index');
@@ -122,16 +94,16 @@ Route::prefix('user')->group(function () {
             Route::get('/search', 'CustomersController@search')->name('customers.search');
         });
 
-        /*** Schedules Routes ***/
-        Route::group(['prefix' => 'schedules'], function () {
-            Route::get('/', 'SchedulesController@index')->name('schedules.index');
-            Route::get('/create', 'SchedulesController@create')->name('schedules.create');
-            Route::post('/create', 'SchedulesController@store')->name('schedules.store');
-            Route::get('/{id}/show', 'SchedulesController@show')->name('schedules.show');
-            Route::get('/edit/{id}', 'SchedulesController@edit')->name('schedules.edit');
-            Route::put('/update/{id}', 'SchedulesController@update')->name('schedules.update');
-            Route::delete('/{id}/delete', 'SchedulesController@destroy')->name('schedules.destroy');
-            Route::get('/search', 'SchedulesController@search')->name('schedules.search');
+        /*** Parameters Routes ***/
+        Route::group(['prefix' => 'parameters'], function () {
+            Route::get('/', 'ParametersController@index')->name('parameters.index');
+            Route::get('/create', 'ParametersController@create')->name('parameters.create');
+            Route::post('/create', 'ParametersController@store')->name('parameters.store');
+            Route::get('/show/{id}', 'ParametersController@show')->name('parameters.show');
+            Route::get('/edit/{id}', 'ParametersController@edit')->name('parameters.edit');
+            Route::put('/update/{id}', 'ParametersController@update')->name('parameters.update');
+            Route::delete('/delete/{id}', 'ParametersController@destroy')->name('parameters.destroy');
+            Route::get('/search', 'ParametersController@search')->name('parameters.search');
         });
 
         /*** Reports Routes ***/
