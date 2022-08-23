@@ -15,7 +15,9 @@ class CreateParametersTable extends Migration
     {
         Schema::create('parameters', function (Blueprint $table) {
             $table->id();
-
+            $table->string('name')->nullable();
+            $table->string('cat_name')->nullable();
+            $table->string('status')->nullable();
             $table->timestamps();
         });
     }

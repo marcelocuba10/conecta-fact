@@ -10,9 +10,11 @@ class Parameters extends Model
     use HasFactory;
 
     protected $fillable = [
-        ''
+        'name',
+        'cat_name',
+        'status'
     ];
-    
+
     protected static function newFactory()
     {
         return \Modules\User\Database\factories\ParametersFactory::new();
